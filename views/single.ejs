@@ -1,0 +1,17 @@
+<% include partials/header %>
+<div class="single">
+	 <div class="container">
+		  <div class="col-md-8 single-main">				 
+			  <div class="single-grid">
+                  <h2><%= blog['title'] %></h2><a class="btn btn-primary" role="button" href="/blogs/<%= blog['_id']%>/edit">EDIT</a><br /><form action="/blogs/<%= blog._id %>?_method=delete" method="post"><input class="btn btn-danger" type="submit" value="DELETE"/></form>
+                  <img src="<%= blog['image'] %>" alt=""/>
+                  <p><%= blog['description'] %></p>
+			  </div>
+		  </div>
+			  <div class="clearfix"></div>
+		  </div>
+	  </div>
+</div>
+<!---->
+<% include partials/footer %>
+	

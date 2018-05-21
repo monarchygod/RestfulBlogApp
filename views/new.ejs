@@ -1,0 +1,19 @@
+<% include partials/header %>
+<div class="single">
+	 <div class="container">
+         <h2>Create New Post</h2>
+		  <div class="content-form">
+              <form action="/blogs" method="post">
+                  <input type="text" name="blog[title]" placeholder="Title" required/>
+                  <input type="text" name="blog[image]" placeholder="Image" required/>
+                  <textarea name="blog[description]" placeholder="Write Post Here"></textarea>
+                  <input type="submit" value="SEND"/>
+              </form>
+						 </div>
+			  <div class="clearfix"></div>
+		  </div>
+	  </div>
+</div>
+<!---->
+<% include partials/footer %>
+	

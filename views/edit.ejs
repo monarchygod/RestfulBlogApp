@@ -1,0 +1,19 @@
+<% include partials/header %>
+<div class="single">
+	 <div class="container">
+         <h2>Edit <%= blog['title'] %></h2>
+		  <div class="content-form">
+              <form action="/blogs/<%= blog._id %>?_method=put" method="post">
+                  <input type="text" name="blog[title]" value="<%= blog['title'] %>" required/>
+                  <input type="text" name="blog[image]" value="<%= blog['image'] %>" required/>
+                  <textarea name="blog[description]"><%= blog['description'] %></textarea>
+                  <input type="submit" value="SEND"/>
+              </form>
+						 </div>
+			  <div class="clearfix"></div>
+		  </div>
+	  </div>
+</div>
+<!---->
+<% include partials/footer %>
+

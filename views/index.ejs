@@ -1,0 +1,29 @@
+<% include ./partials/header %>
+
+<div class="content">
+	 <div class="container">
+		 <div class="content-grids">
+			 <div class="col-md-8 content-main">
+                 <% blogs.forEach(function(blog){%>
+				 <div class="content-grid">					 
+					 <div class="content-grid-info">
+                         <div class="post-info">
+                         <h4><a href="/blogs/<%= blog['_id']%>"><%= blog['title']%></a>  <%= blog['created'].toString() %> </h4>
+                         </div>
+						 <img src="<%= blog['image']%>" alt=""/>
+						 <div class="post-info">
+						 <p><%= blog['description'].substring(0,100) %></p>
+						 <a href="/blogs/<%= blog['_id']%>"><span></span>READ MORE</a>
+						 </div>
+					 </div>
+				 </div>
+                 <%}) %>
+			  </div>
+
+			  <div class="clearfix"></div>
+		  </div>
+	  </div>
+</div>
+<!---->
+<% include ./partials/footer %>
+	
